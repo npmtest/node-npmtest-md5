@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-md5/md5/md5.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-md5/node_modules/md5/md5.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-md5">npmtest-md5 (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-md5/md5/md5.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-md5/node_modules/md5/md5.js</span></h1>
     <h2>
         
         Statements: <span class="metric">8.49% <small>(9 / 106)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-md5/md5/</a> » md5.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-md5/node_modules/md5/</a> &#187; md5.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -541,20 +543,20 @@
       bin = require('charenc').bin,
 &nbsp;
   // The core
-  md5 = <span class="fstat-no" title="function not covered">function (message, options) {</span>
+  md5 = <span class="fstat-no" title="function not covered" >function (message, options) {</span>
     // Convert to byte array
-<span class="cstat-no" title="statement not covered">    if (message.constructor == String)</span>
-<span class="cstat-no" title="statement not covered">      if (options &amp;&amp; options.encoding === 'binary')</span>
-<span class="cstat-no" title="statement not covered">        message = bin.stringToBytes(message);</span>
+<span class="cstat-no" title="statement not covered" >    if (message.constructor == String)</span>
+<span class="cstat-no" title="statement not covered" >      if (options &amp;&amp; options.encoding === 'binary')</span>
+<span class="cstat-no" title="statement not covered" >        message = bin.stringToBytes(message);</span>
       else
-<span class="cstat-no" title="statement not covered">        message = utf8.stringToBytes(message);</span>
-    else <span class="cstat-no" title="statement not covered">if (isBuffer(message))</span>
-<span class="cstat-no" title="statement not covered">      message = Array.prototype.slice.call(message, 0);</span>
-    else <span class="cstat-no" title="statement not covered">if (!Array.isArray(message))</span>
-<span class="cstat-no" title="statement not covered">      message = message.toString();</span>
+<span class="cstat-no" title="statement not covered" >        message = utf8.stringToBytes(message);</span>
+    else <span class="cstat-no" title="statement not covered" >if (isBuffer(message))</span>
+<span class="cstat-no" title="statement not covered" >      message = Array.prototype.slice.call(message, 0);</span>
+    else <span class="cstat-no" title="statement not covered" >if (!Array.isArray(message))</span>
+<span class="cstat-no" title="statement not covered" >      message = message.toString();</span>
     // else, assume byte array already
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var m = crypt.bytesToWords(message),</span>
+<span class="cstat-no" title="statement not covered" >    var m = crypt.bytesToWords(message),</span>
         l = message.length * 8,
         a =  1732584193,
         b = -271733879,
@@ -562,133 +564,133 @@
         d =  271733878;
 &nbsp;
     // Swap endian
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; m.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">      m[i] = ((m[i] &lt;&lt;  8) | (m[i] &gt;&gt;&gt; 24)) &amp; 0x00FF00FF |</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; m.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >      m[i] = ((m[i] &lt;&lt;  8) | (m[i] &gt;&gt;&gt; 24)) &amp; 0x00FF00FF |</span>
              ((m[i] &lt;&lt; 24) | (m[i] &gt;&gt;&gt;  8)) &amp; 0xFF00FF00;
     }
 &nbsp;
     // Padding
-<span class="cstat-no" title="statement not covered">    m[l &gt;&gt;&gt; 5] |= 0x80 &lt;&lt; (l % 32);</span>
-<span class="cstat-no" title="statement not covered">    m[(((l + 64) &gt;&gt;&gt; 9) &lt;&lt; 4) + 14] = l;</span>
+<span class="cstat-no" title="statement not covered" >    m[l &gt;&gt;&gt; 5] |= 0x80 &lt;&lt; (l % 32);</span>
+<span class="cstat-no" title="statement not covered" >    m[(((l + 64) &gt;&gt;&gt; 9) &lt;&lt; 4) + 14] = l;</span>
 &nbsp;
     // Method shortcuts
-<span class="cstat-no" title="statement not covered">    var FF = md5._ff,</span>
+<span class="cstat-no" title="statement not covered" >    var FF = md5._ff,</span>
         GG = md5._gg,
         HH = md5._hh,
         II = md5._ii;
 &nbsp;
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; m.length; i += 16) {</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; m.length; i += 16) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var aa = a,</span>
+<span class="cstat-no" title="statement not covered" >      var aa = a,</span>
           bb = b,
           cc = c,
           dd = d;
 &nbsp;
-<span class="cstat-no" title="statement not covered">      a = FF(a, b, c, d, m[i+ 0],  7, -680876936);</span>
-<span class="cstat-no" title="statement not covered">      d = FF(d, a, b, c, m[i+ 1], 12, -389564586);</span>
-<span class="cstat-no" title="statement not covered">      c = FF(c, d, a, b, m[i+ 2], 17,  606105819);</span>
-<span class="cstat-no" title="statement not covered">      b = FF(b, c, d, a, m[i+ 3], 22, -1044525330);</span>
-<span class="cstat-no" title="statement not covered">      a = FF(a, b, c, d, m[i+ 4],  7, -176418897);</span>
-<span class="cstat-no" title="statement not covered">      d = FF(d, a, b, c, m[i+ 5], 12,  1200080426);</span>
-<span class="cstat-no" title="statement not covered">      c = FF(c, d, a, b, m[i+ 6], 17, -1473231341);</span>
-<span class="cstat-no" title="statement not covered">      b = FF(b, c, d, a, m[i+ 7], 22, -45705983);</span>
-<span class="cstat-no" title="statement not covered">      a = FF(a, b, c, d, m[i+ 8],  7,  1770035416);</span>
-<span class="cstat-no" title="statement not covered">      d = FF(d, a, b, c, m[i+ 9], 12, -1958414417);</span>
-<span class="cstat-no" title="statement not covered">      c = FF(c, d, a, b, m[i+10], 17, -42063);</span>
-<span class="cstat-no" title="statement not covered">      b = FF(b, c, d, a, m[i+11], 22, -1990404162);</span>
-<span class="cstat-no" title="statement not covered">      a = FF(a, b, c, d, m[i+12],  7,  1804603682);</span>
-<span class="cstat-no" title="statement not covered">      d = FF(d, a, b, c, m[i+13], 12, -40341101);</span>
-<span class="cstat-no" title="statement not covered">      c = FF(c, d, a, b, m[i+14], 17, -1502002290);</span>
-<span class="cstat-no" title="statement not covered">      b = FF(b, c, d, a, m[i+15], 22,  1236535329);</span>
+<span class="cstat-no" title="statement not covered" >      a = FF(a, b, c, d, m[i+ 0],  7, -680876936);</span>
+<span class="cstat-no" title="statement not covered" >      d = FF(d, a, b, c, m[i+ 1], 12, -389564586);</span>
+<span class="cstat-no" title="statement not covered" >      c = FF(c, d, a, b, m[i+ 2], 17,  606105819);</span>
+<span class="cstat-no" title="statement not covered" >      b = FF(b, c, d, a, m[i+ 3], 22, -1044525330);</span>
+<span class="cstat-no" title="statement not covered" >      a = FF(a, b, c, d, m[i+ 4],  7, -176418897);</span>
+<span class="cstat-no" title="statement not covered" >      d = FF(d, a, b, c, m[i+ 5], 12,  1200080426);</span>
+<span class="cstat-no" title="statement not covered" >      c = FF(c, d, a, b, m[i+ 6], 17, -1473231341);</span>
+<span class="cstat-no" title="statement not covered" >      b = FF(b, c, d, a, m[i+ 7], 22, -45705983);</span>
+<span class="cstat-no" title="statement not covered" >      a = FF(a, b, c, d, m[i+ 8],  7,  1770035416);</span>
+<span class="cstat-no" title="statement not covered" >      d = FF(d, a, b, c, m[i+ 9], 12, -1958414417);</span>
+<span class="cstat-no" title="statement not covered" >      c = FF(c, d, a, b, m[i+10], 17, -42063);</span>
+<span class="cstat-no" title="statement not covered" >      b = FF(b, c, d, a, m[i+11], 22, -1990404162);</span>
+<span class="cstat-no" title="statement not covered" >      a = FF(a, b, c, d, m[i+12],  7,  1804603682);</span>
+<span class="cstat-no" title="statement not covered" >      d = FF(d, a, b, c, m[i+13], 12, -40341101);</span>
+<span class="cstat-no" title="statement not covered" >      c = FF(c, d, a, b, m[i+14], 17, -1502002290);</span>
+<span class="cstat-no" title="statement not covered" >      b = FF(b, c, d, a, m[i+15], 22,  1236535329);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      a = GG(a, b, c, d, m[i+ 1],  5, -165796510);</span>
-<span class="cstat-no" title="statement not covered">      d = GG(d, a, b, c, m[i+ 6],  9, -1069501632);</span>
-<span class="cstat-no" title="statement not covered">      c = GG(c, d, a, b, m[i+11], 14,  643717713);</span>
-<span class="cstat-no" title="statement not covered">      b = GG(b, c, d, a, m[i+ 0], 20, -373897302);</span>
-<span class="cstat-no" title="statement not covered">      a = GG(a, b, c, d, m[i+ 5],  5, -701558691);</span>
-<span class="cstat-no" title="statement not covered">      d = GG(d, a, b, c, m[i+10],  9,  38016083);</span>
-<span class="cstat-no" title="statement not covered">      c = GG(c, d, a, b, m[i+15], 14, -660478335);</span>
-<span class="cstat-no" title="statement not covered">      b = GG(b, c, d, a, m[i+ 4], 20, -405537848);</span>
-<span class="cstat-no" title="statement not covered">      a = GG(a, b, c, d, m[i+ 9],  5,  568446438);</span>
-<span class="cstat-no" title="statement not covered">      d = GG(d, a, b, c, m[i+14],  9, -1019803690);</span>
-<span class="cstat-no" title="statement not covered">      c = GG(c, d, a, b, m[i+ 3], 14, -187363961);</span>
-<span class="cstat-no" title="statement not covered">      b = GG(b, c, d, a, m[i+ 8], 20,  1163531501);</span>
-<span class="cstat-no" title="statement not covered">      a = GG(a, b, c, d, m[i+13],  5, -1444681467);</span>
-<span class="cstat-no" title="statement not covered">      d = GG(d, a, b, c, m[i+ 2],  9, -51403784);</span>
-<span class="cstat-no" title="statement not covered">      c = GG(c, d, a, b, m[i+ 7], 14,  1735328473);</span>
-<span class="cstat-no" title="statement not covered">      b = GG(b, c, d, a, m[i+12], 20, -1926607734);</span>
+<span class="cstat-no" title="statement not covered" >      a = GG(a, b, c, d, m[i+ 1],  5, -165796510);</span>
+<span class="cstat-no" title="statement not covered" >      d = GG(d, a, b, c, m[i+ 6],  9, -1069501632);</span>
+<span class="cstat-no" title="statement not covered" >      c = GG(c, d, a, b, m[i+11], 14,  643717713);</span>
+<span class="cstat-no" title="statement not covered" >      b = GG(b, c, d, a, m[i+ 0], 20, -373897302);</span>
+<span class="cstat-no" title="statement not covered" >      a = GG(a, b, c, d, m[i+ 5],  5, -701558691);</span>
+<span class="cstat-no" title="statement not covered" >      d = GG(d, a, b, c, m[i+10],  9,  38016083);</span>
+<span class="cstat-no" title="statement not covered" >      c = GG(c, d, a, b, m[i+15], 14, -660478335);</span>
+<span class="cstat-no" title="statement not covered" >      b = GG(b, c, d, a, m[i+ 4], 20, -405537848);</span>
+<span class="cstat-no" title="statement not covered" >      a = GG(a, b, c, d, m[i+ 9],  5,  568446438);</span>
+<span class="cstat-no" title="statement not covered" >      d = GG(d, a, b, c, m[i+14],  9, -1019803690);</span>
+<span class="cstat-no" title="statement not covered" >      c = GG(c, d, a, b, m[i+ 3], 14, -187363961);</span>
+<span class="cstat-no" title="statement not covered" >      b = GG(b, c, d, a, m[i+ 8], 20,  1163531501);</span>
+<span class="cstat-no" title="statement not covered" >      a = GG(a, b, c, d, m[i+13],  5, -1444681467);</span>
+<span class="cstat-no" title="statement not covered" >      d = GG(d, a, b, c, m[i+ 2],  9, -51403784);</span>
+<span class="cstat-no" title="statement not covered" >      c = GG(c, d, a, b, m[i+ 7], 14,  1735328473);</span>
+<span class="cstat-no" title="statement not covered" >      b = GG(b, c, d, a, m[i+12], 20, -1926607734);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      a = HH(a, b, c, d, m[i+ 5],  4, -378558);</span>
-<span class="cstat-no" title="statement not covered">      d = HH(d, a, b, c, m[i+ 8], 11, -2022574463);</span>
-<span class="cstat-no" title="statement not covered">      c = HH(c, d, a, b, m[i+11], 16,  1839030562);</span>
-<span class="cstat-no" title="statement not covered">      b = HH(b, c, d, a, m[i+14], 23, -35309556);</span>
-<span class="cstat-no" title="statement not covered">      a = HH(a, b, c, d, m[i+ 1],  4, -1530992060);</span>
-<span class="cstat-no" title="statement not covered">      d = HH(d, a, b, c, m[i+ 4], 11,  1272893353);</span>
-<span class="cstat-no" title="statement not covered">      c = HH(c, d, a, b, m[i+ 7], 16, -155497632);</span>
-<span class="cstat-no" title="statement not covered">      b = HH(b, c, d, a, m[i+10], 23, -1094730640);</span>
-<span class="cstat-no" title="statement not covered">      a = HH(a, b, c, d, m[i+13],  4,  681279174);</span>
-<span class="cstat-no" title="statement not covered">      d = HH(d, a, b, c, m[i+ 0], 11, -358537222);</span>
-<span class="cstat-no" title="statement not covered">      c = HH(c, d, a, b, m[i+ 3], 16, -722521979);</span>
-<span class="cstat-no" title="statement not covered">      b = HH(b, c, d, a, m[i+ 6], 23,  76029189);</span>
-<span class="cstat-no" title="statement not covered">      a = HH(a, b, c, d, m[i+ 9],  4, -640364487);</span>
-<span class="cstat-no" title="statement not covered">      d = HH(d, a, b, c, m[i+12], 11, -421815835);</span>
-<span class="cstat-no" title="statement not covered">      c = HH(c, d, a, b, m[i+15], 16,  530742520);</span>
-<span class="cstat-no" title="statement not covered">      b = HH(b, c, d, a, m[i+ 2], 23, -995338651);</span>
+<span class="cstat-no" title="statement not covered" >      a = HH(a, b, c, d, m[i+ 5],  4, -378558);</span>
+<span class="cstat-no" title="statement not covered" >      d = HH(d, a, b, c, m[i+ 8], 11, -2022574463);</span>
+<span class="cstat-no" title="statement not covered" >      c = HH(c, d, a, b, m[i+11], 16,  1839030562);</span>
+<span class="cstat-no" title="statement not covered" >      b = HH(b, c, d, a, m[i+14], 23, -35309556);</span>
+<span class="cstat-no" title="statement not covered" >      a = HH(a, b, c, d, m[i+ 1],  4, -1530992060);</span>
+<span class="cstat-no" title="statement not covered" >      d = HH(d, a, b, c, m[i+ 4], 11,  1272893353);</span>
+<span class="cstat-no" title="statement not covered" >      c = HH(c, d, a, b, m[i+ 7], 16, -155497632);</span>
+<span class="cstat-no" title="statement not covered" >      b = HH(b, c, d, a, m[i+10], 23, -1094730640);</span>
+<span class="cstat-no" title="statement not covered" >      a = HH(a, b, c, d, m[i+13],  4,  681279174);</span>
+<span class="cstat-no" title="statement not covered" >      d = HH(d, a, b, c, m[i+ 0], 11, -358537222);</span>
+<span class="cstat-no" title="statement not covered" >      c = HH(c, d, a, b, m[i+ 3], 16, -722521979);</span>
+<span class="cstat-no" title="statement not covered" >      b = HH(b, c, d, a, m[i+ 6], 23,  76029189);</span>
+<span class="cstat-no" title="statement not covered" >      a = HH(a, b, c, d, m[i+ 9],  4, -640364487);</span>
+<span class="cstat-no" title="statement not covered" >      d = HH(d, a, b, c, m[i+12], 11, -421815835);</span>
+<span class="cstat-no" title="statement not covered" >      c = HH(c, d, a, b, m[i+15], 16,  530742520);</span>
+<span class="cstat-no" title="statement not covered" >      b = HH(b, c, d, a, m[i+ 2], 23, -995338651);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      a = II(a, b, c, d, m[i+ 0],  6, -198630844);</span>
-<span class="cstat-no" title="statement not covered">      d = II(d, a, b, c, m[i+ 7], 10,  1126891415);</span>
-<span class="cstat-no" title="statement not covered">      c = II(c, d, a, b, m[i+14], 15, -1416354905);</span>
-<span class="cstat-no" title="statement not covered">      b = II(b, c, d, a, m[i+ 5], 21, -57434055);</span>
-<span class="cstat-no" title="statement not covered">      a = II(a, b, c, d, m[i+12],  6,  1700485571);</span>
-<span class="cstat-no" title="statement not covered">      d = II(d, a, b, c, m[i+ 3], 10, -1894986606);</span>
-<span class="cstat-no" title="statement not covered">      c = II(c, d, a, b, m[i+10], 15, -1051523);</span>
-<span class="cstat-no" title="statement not covered">      b = II(b, c, d, a, m[i+ 1], 21, -2054922799);</span>
-<span class="cstat-no" title="statement not covered">      a = II(a, b, c, d, m[i+ 8],  6,  1873313359);</span>
-<span class="cstat-no" title="statement not covered">      d = II(d, a, b, c, m[i+15], 10, -30611744);</span>
-<span class="cstat-no" title="statement not covered">      c = II(c, d, a, b, m[i+ 6], 15, -1560198380);</span>
-<span class="cstat-no" title="statement not covered">      b = II(b, c, d, a, m[i+13], 21,  1309151649);</span>
-<span class="cstat-no" title="statement not covered">      a = II(a, b, c, d, m[i+ 4],  6, -145523070);</span>
-<span class="cstat-no" title="statement not covered">      d = II(d, a, b, c, m[i+11], 10, -1120210379);</span>
-<span class="cstat-no" title="statement not covered">      c = II(c, d, a, b, m[i+ 2], 15,  718787259);</span>
-<span class="cstat-no" title="statement not covered">      b = II(b, c, d, a, m[i+ 9], 21, -343485551);</span>
+<span class="cstat-no" title="statement not covered" >      a = II(a, b, c, d, m[i+ 0],  6, -198630844);</span>
+<span class="cstat-no" title="statement not covered" >      d = II(d, a, b, c, m[i+ 7], 10,  1126891415);</span>
+<span class="cstat-no" title="statement not covered" >      c = II(c, d, a, b, m[i+14], 15, -1416354905);</span>
+<span class="cstat-no" title="statement not covered" >      b = II(b, c, d, a, m[i+ 5], 21, -57434055);</span>
+<span class="cstat-no" title="statement not covered" >      a = II(a, b, c, d, m[i+12],  6,  1700485571);</span>
+<span class="cstat-no" title="statement not covered" >      d = II(d, a, b, c, m[i+ 3], 10, -1894986606);</span>
+<span class="cstat-no" title="statement not covered" >      c = II(c, d, a, b, m[i+10], 15, -1051523);</span>
+<span class="cstat-no" title="statement not covered" >      b = II(b, c, d, a, m[i+ 1], 21, -2054922799);</span>
+<span class="cstat-no" title="statement not covered" >      a = II(a, b, c, d, m[i+ 8],  6,  1873313359);</span>
+<span class="cstat-no" title="statement not covered" >      d = II(d, a, b, c, m[i+15], 10, -30611744);</span>
+<span class="cstat-no" title="statement not covered" >      c = II(c, d, a, b, m[i+ 6], 15, -1560198380);</span>
+<span class="cstat-no" title="statement not covered" >      b = II(b, c, d, a, m[i+13], 21,  1309151649);</span>
+<span class="cstat-no" title="statement not covered" >      a = II(a, b, c, d, m[i+ 4],  6, -145523070);</span>
+<span class="cstat-no" title="statement not covered" >      d = II(d, a, b, c, m[i+11], 10, -1120210379);</span>
+<span class="cstat-no" title="statement not covered" >      c = II(c, d, a, b, m[i+ 2], 15,  718787259);</span>
+<span class="cstat-no" title="statement not covered" >      b = II(b, c, d, a, m[i+ 9], 21, -343485551);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      a = (a + aa) &gt;&gt;&gt; 0;</span>
-<span class="cstat-no" title="statement not covered">      b = (b + bb) &gt;&gt;&gt; 0;</span>
-<span class="cstat-no" title="statement not covered">      c = (c + cc) &gt;&gt;&gt; 0;</span>
-<span class="cstat-no" title="statement not covered">      d = (d + dd) &gt;&gt;&gt; 0;</span>
+<span class="cstat-no" title="statement not covered" >      a = (a + aa) &gt;&gt;&gt; 0;</span>
+<span class="cstat-no" title="statement not covered" >      b = (b + bb) &gt;&gt;&gt; 0;</span>
+<span class="cstat-no" title="statement not covered" >      c = (c + cc) &gt;&gt;&gt; 0;</span>
+<span class="cstat-no" title="statement not covered" >      d = (d + dd) &gt;&gt;&gt; 0;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return crypt.endian([a, b, c, d]);</span>
+<span class="cstat-no" title="statement not covered" >    return crypt.endian([a, b, c, d]);</span>
   };
 &nbsp;
   // Auxiliary functions
-  md5._ff  = <span class="fstat-no" title="function not covered">function (a, b, c, d, x, s, t) {</span>
-<span class="cstat-no" title="statement not covered">    var n = a + (b &amp; c | ~b &amp; d) + (x &gt;&gt;&gt; 0) + t;</span>
-<span class="cstat-no" title="statement not covered">    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
+  md5._ff  = <span class="fstat-no" title="function not covered" >function (a, b, c, d, x, s, t) {</span>
+<span class="cstat-no" title="statement not covered" >    var n = a + (b &amp; c | ~b &amp; d) + (x &gt;&gt;&gt; 0) + t;</span>
+<span class="cstat-no" title="statement not covered" >    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
   };
-  md5._gg  = <span class="fstat-no" title="function not covered">function (a, b, c, d, x, s, t) {</span>
-<span class="cstat-no" title="statement not covered">    var n = a + (b &amp; d | c &amp; ~d) + (x &gt;&gt;&gt; 0) + t;</span>
-<span class="cstat-no" title="statement not covered">    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
+  md5._gg  = <span class="fstat-no" title="function not covered" >function (a, b, c, d, x, s, t) {</span>
+<span class="cstat-no" title="statement not covered" >    var n = a + (b &amp; d | c &amp; ~d) + (x &gt;&gt;&gt; 0) + t;</span>
+<span class="cstat-no" title="statement not covered" >    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
   };
-  md5._hh  = <span class="fstat-no" title="function not covered">function (a, b, c, d, x, s, t) {</span>
-<span class="cstat-no" title="statement not covered">    var n = a + (b ^ c ^ d) + (x &gt;&gt;&gt; 0) + t;</span>
-<span class="cstat-no" title="statement not covered">    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
+  md5._hh  = <span class="fstat-no" title="function not covered" >function (a, b, c, d, x, s, t) {</span>
+<span class="cstat-no" title="statement not covered" >    var n = a + (b ^ c ^ d) + (x &gt;&gt;&gt; 0) + t;</span>
+<span class="cstat-no" title="statement not covered" >    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
   };
-  md5._ii  = <span class="fstat-no" title="function not covered">function (a, b, c, d, x, s, t) {</span>
-<span class="cstat-no" title="statement not covered">    var n = a + (c ^ (b | ~d)) + (x &gt;&gt;&gt; 0) + t;</span>
-<span class="cstat-no" title="statement not covered">    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
+  md5._ii  = <span class="fstat-no" title="function not covered" >function (a, b, c, d, x, s, t) {</span>
+<span class="cstat-no" title="statement not covered" >    var n = a + (c ^ (b | ~d)) + (x &gt;&gt;&gt; 0) + t;</span>
+<span class="cstat-no" title="statement not covered" >    return ((n &lt;&lt; s) | (n &gt;&gt;&gt; (32 - s))) + b;</span>
   };
 &nbsp;
   // Package private blocksize
   md5._blocksize = 16;
   md5._digestsize = 16;
 &nbsp;
-  module.exports = <span class="fstat-no" title="function not covered">function (message, options) {</span>
-<span class="cstat-no" title="statement not covered">    if (message === undefined || message === null)</span>
-<span class="cstat-no" title="statement not covered">      throw new Error('Illegal argument ' + message);</span>
+  module.exports = <span class="fstat-no" title="function not covered" >function (message, options) {</span>
+<span class="cstat-no" title="statement not covered" >    if (message === undefined || message === null)</span>
+<span class="cstat-no" title="statement not covered" >      throw new Error('Illegal argument ' + message);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var digestbytes = crypt.wordsToBytes(md5(message, options));</span>
-<span class="cstat-no" title="statement not covered">    return options &amp;&amp; options.asBytes ? digestbytes :</span>
+<span class="cstat-no" title="statement not covered" >    var digestbytes = crypt.wordsToBytes(md5(message, options));</span>
+<span class="cstat-no" title="statement not covered" >    return options &amp;&amp; options.asBytes ? digestbytes :</span>
         options &amp;&amp; options.asString ? bin.bytesToString(digestbytes) :
         crypt.bytesToHex(digestbytes);
   };
@@ -696,11 +698,10 @@
 })();
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 13:59:29 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:59:08 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
