@@ -1,4 +1,7 @@
-# test coverage for  [md5 (v2.2.1)](https://github.com/pvorb/node-md5#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-md5.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-md5) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-md5.svg)](https://travis-ci.org/npmtest/node-npmtest-md5)
+# npmtest-md5
+
+#### basic test coverage for  [md5 (v2.2.1)](https://github.com/pvorb/node-md5#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-md5.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-md5) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-md5.svg)](https://travis-ci.org/npmtest/node-npmtest-md5)
+
 #### js function for hashing messages with MD5
 
 [![NPM](https://nodei.co/npm/md5.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/md5)
